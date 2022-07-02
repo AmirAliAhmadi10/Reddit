@@ -40,14 +40,14 @@ class About extends StatelessWidget {
          Container(
            child: Column(
              children: [
-               Text(" Artin Elhami Rad",style: TextStyle(fontSize: 20 , fontWeight: FontWeight.w400),),
+               Text(" Amir Ali Ahmadi",style: TextStyle(fontSize: 20 , fontWeight: FontWeight.w400),),
                Row(
                    children:[
                      Container(
                        child: Text("Email :",style: TextStyle(fontWeight: FontWeight.w400,fontSize: 20,height: 1.5),),
                      ),
                      Container(
-                       child: Text("ArtinElhamiRad@gmail.com",style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400,color: Colors.blue),),
+                       child: Text("AmirAlifcb682@gmail.com",style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400,color: Colors.blue),),
                      )
                    ]
                ),
