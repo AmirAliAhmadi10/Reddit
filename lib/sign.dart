@@ -2,10 +2,11 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:reddit/login.dart';
 
 import 'feed.dart';
 class SignupPage extends StatelessWidget {
-  const SignupPage({Key? key}) : super(key: key);
+  const SignupPage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -47,9 +48,35 @@ class SignupPage extends StatelessWidget {
               ),
               Column(
                 children:<Widget> [
-                inputFile(label: "User Name"),
+                  TextField(
+                    decoration: const InputDecoration(
+                      hintText: "User name",
+                      border: OutlineInputBorder(),
+                    ),
+                    controller: usernameC,
+                  ),
+                  TextField(
+                    decoration: const InputDecoration(
+                      hintText: "Password",
+                      border: OutlineInputBorder(),
+                      suffixIcon :Icon(Icons.remove_red_eye_outlined),
+                    ),
+                    controller: passwordC,
+
+                    obscureText: true,
+                  ),
+                  TextField(
+                    decoration: const InputDecoration(
+                      hintText: "Email",
+                      border: OutlineInputBorder(),
+                    ),
+                    controller: emailC,
+
+                  ),
+
+             /*   inputFile(label: "User Name"),
                 inputFile(label: "Email"),
-                inputFile(label: "Password",obscureText: true),
+                inputFile(label: "Password",obscureText: true),*/
                 ],
               ),
               Container(
@@ -75,7 +102,7 @@ class SignupPage extends StatelessWidget {
                   Navigator.push(context, MaterialPageRoute(builder:(context) => HomePage()));
                   //raftan be home
                 },
-                color: Color(0xffee7600),
+                color: Colors.deepOrange,
                 elevation: 0,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(50),

@@ -1,25 +1,32 @@
 import 'package:flutter/material.dart';
-
+import 'package:reddit/postmodel.dart' as Post;
 import 'add.dart';
 import 'chat.dart';
 import 'home.dart';
 import 'notification.dart';
+import 'postmodel.dart';
 import 'search.dart';
 
 class HomePage extends StatefulWidget {
+
+
   @override
   State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
+
+
+
   int index =0;
   final screen =[
     PageOne(),
     SearchPage(),
     AddPage(),
     ChatPage(),
-    NotifPage(),
+    // NotifPage(),
   ];
+
   @override
   Widget build(BuildContext context) => Scaffold(
     body: screen[index],
@@ -42,13 +49,13 @@ class _HomePageState extends State<HomePage> {
           label: 'Add',
         ),
         NavigationDestination(
-          icon:Icon(Icons.chat,color: Colors.deepOrange,),
-          label: 'Chat',
+          icon:Icon(Icons.settings,color: Colors.deepOrange,),
+          label: 'Setting',
         ),
-        NavigationDestination(
+        /*NavigationDestination(
           icon:Icon(Icons.notifications, color: Colors.deepOrange,),
           label: 'Notifications',
-        ),
+        ),*/
       ],
     ) ,
   );

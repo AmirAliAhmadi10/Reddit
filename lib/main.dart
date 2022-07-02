@@ -7,12 +7,15 @@ import 'sign.dart';
 
 void main() {
   runApp(MaterialApp(
+    theme: ThemeData(
+      primarySwatch: Colors.deepOrange,
+    ),
     debugShowCheckedModeBanner: false,
     home: HomePage(),
   ));
 }
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +32,12 @@ class HomePage extends StatelessWidget {
               Column(
                 children: <Widget>[
                   Text("Welcome",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30)
-                    ,)
+                    ,),
+                  Container(
+                    width:0,
+                    height: 30,
+                  ),
+                  Image.network('https://external-preview.redd.it/iDdntscPf-nfWKqzHRGFmhVxZm4hZgaKe5oyFws-yzA.png?auto=webp&s=38648ef0dc2c3fce76d5e1d8639234d8da0152b2'),
                 ],
               ),
       /*        Container(
@@ -69,7 +77,7 @@ class HomePage extends StatelessWidget {
                     onPressed:(){
                       Navigator.push(context, MaterialPageRoute(builder:(context) => SignupPage()));
                     },
-                    color: Color(0xffee7600),
+                    color: Colors.deepOrange,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(50),
                     ),child: Text(
